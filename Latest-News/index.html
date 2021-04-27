@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Latest News</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font: 400px 16px/1.428 Consolas;
+      }
+      body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .box {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+      }
+      .topBar {
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      .frame {
+        height: calc(100% - 40px);
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+    </style>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <div class="box">
+      <header class='topBar'>
+        <style>
+          @font-face {
+            font-family: NavbarFont;
+            src: url(/NavbarFont.otf);
+            font-weight: none;
+          }
+
+          ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            z-index: 9998;
+          }
+
+          ul.topnav li {
+            float: left;
+          }
+
+          ul.topnav li a {
+            font-family: NavbarFont;
+            font-size: 25px;
+            margin: -3px 0px 0px 0px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+
+          ul.topnav li a:hover:not(.active) {
+            background-color: #111;
+          }
+
+          ul.topnav li a.active {
+            background-color: #4CAF50;
+          }
+        </style>
+
+        <ul class="topnav" style="width: 100vw;">
+          <li><a href="/">Home</a></li>
+          <li><a href="/About-the-Website">About the Website</a></li>
+          <li><a href="javascript:alert('Very hard website to make, made by the creator of this website, Sarvesh Madullapalli.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+        </ul>
+        <br><br><br>
+      </header>
+      <iframe class='frame' frameborder="0" height='100%' scrolling="yes" src="https://news-website-important.sarveshmadullap.repl.co/" width='100%'></iframe>
+    </div>
+  </body>
+</html>

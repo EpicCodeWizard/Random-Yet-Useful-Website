@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Test Out Different Sources of Cam and Mic Input and Output</title>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -16px 0px 0px -17px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://webrtc.github.io/samples/src/content/devices/input-output/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <div id="container">
+      <center><h1>Test Out Different Sources of Cam and Mic Input and Output</h1></center>
+      <div class="select">
+        <label for="audioSource">Audio input source:</label> <select id="audioSource">
+          <option value="">
+            microphone 1
+          </option>
+        </select>
+      </div>
+      <div class="select">
+        <label for="audioOutput">Audio output destination:</label> <select id="audioOutput">
+          <option value="">
+            speaker 1
+          </option>
+        </select>
+      </div>
+      <div class="select">
+        <label for="videoSource">Video source:</label> <select id="videoSource">
+          <option value="">
+            camera 1
+          </option>
+        </select>
+      </div><video autoplay="" id="video"></video> 
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

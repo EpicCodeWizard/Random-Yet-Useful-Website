@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Last Page of the very Last Webserver of the Entire Internet</title>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: 0px 0px 0px 0px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From http://endoftheinternet.com/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <div id="xkcd_online_communities"></div>
+    <div id="textbox">
+      <h2>Sorry, but you have reached...</h2>
+      <h1>The End of the Internet.</h1>
+      <p>That's right, this is the <strong>Last Page</strong> on the very <strong>Last Webserver</strong> of the <strong>Entire Internet!</strong></p>
+      <hr>
+      <h4><strong>You can't go any further from here.<br>
+      YOU MUST NOW START BACK AT THE VERY BEGINNING!</strong></h4>
+      <p>If you have further questions, <em>please contact your system administrator.</em></p>
+      <p><a href="Map.png">Original Background Picture</a>, by Randall Munroe. <a href="//xkcd.com">Website</a></p>
+    </div>
+    <script>
+      function backgroundZoomOut(){
+          $("#xkcd_online_communities").animate({backgroundSize: "100%", backgroundPositionX: '0',backgroundPositionY: '0'}, 5000);
+          $("#textbox").animate({opacity: '1'}, 2200 );
+      }
+      $(function(){ backgroundZoomOut(); });
+    </script>
+  </body>
+</html>

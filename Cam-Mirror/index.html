@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mirror Camera Previewer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      video {
+        max-width: 100%;
+        margin: 0!important;
+        padding: 0!important;
+      }
+      .grid {
+        text-align: center;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+      }
+    </style>
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -16px 0px 0px -17px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://valentin.dasdeck.com/projects/cam2/video-mirror-recording.html.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <div id="container">
+      <h1>Mirror Camera Previewer (Original Camera on the left and Mirror Camera on the right)</h1>
+      <div class="grid">
+        <div>
+          <h2></h2><video autoplay="" controls="" id="video-preview" src="blob:https://valentin.dasdeck.com/c55faf05-8e25-4475-b2f3-682c96c3edd9"></video>
+        </div>
+        <div>
+          <h2></h2><video autoplay="" controls="" id="canvas-preview" src="null"></video>
+        </div>
+      </div>
+      <script src="script.js"></script> 
+      <script>
+        var videoPreview = document.getElementById('video-preview');
+        var canvasPreview = document.getElementById('canvas-preview');
+
+        var logoImage = document.getElementById('logo-image');
+        var waitImage = document.getElementById('wait-image');
+
+        navigator.mediaDevices.getUserMedia({video: true, audio: true}).then(function(camera) {
+          videoPreview.muted = true;
+          videoPreview.srcObject = camera;
+
+          var canvas = document.createElement('canvas');
+          var context = canvas.getContext('2d');
+
+          canvas.style = 'position: absolute; top: 0; left: 0; opacity: 0; margin-top: -9999999999; margin-left: -9999999999; top: -9999999999; left: -9999999999; z-index: -1;';
+          document.body.appendChild(canvas);
+
+          var canvasStream = canvas.captureStream();
+
+          var audioPlusCanvasStream = new MediaStream();
+
+          getTracks(canvasStream, 'video').forEach(function(videoTrack) {
+            audioPlusCanvasStream.addTrack(videoTrack);
+          });
+
+          getTracks(camera, 'audio').forEach(function(audioTrack) {
+            audioPlusCanvasStream.addTrack(audioTrack);
+          });
+
+          var recorder = RecordRTC(audioPlusCanvasStream, {
+            type: 'video'
+          });
+
+          canvasPreview.srcObject = canvasStream;
+
+          recorder.startRecording();
+
+          (function looper() {
+            if(!recorder) return;
+
+            canvas.width = videoPreview.clientWidth;
+            canvas.height = videoPreview.clientHeight;
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.save();
+            context.translate(canvas.width, 0);
+            context.scale(-1, 1);
+            context.drawImage(videoPreview, 0, 0, canvas.width, canvas.height);
+            context.setTransform(1, 0, 0, 1, 0, 0);
+            context.restore();
+
+            setTimeout(looper, 10);
+          })();
+        }).catch(function(error) {
+          alert('ERROR');
+          console.error(error);
+        });
+      </script>
+      <canvas height="572" style="position: absolute; opacity: 0; margin-top: -1e+10px; margin-left: -1e+10px; top: -1e+10px; left: -1e+10px; z-index: -1;" width="763"></canvas>
+    </div>
+	</body>
+</html>

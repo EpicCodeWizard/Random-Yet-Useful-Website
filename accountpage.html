@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google-Sign In Values</title>
+    <style>
+      @font-face {
+        font-family: Pointy_Demo;
+        src: url(Pointy.ttf);
+      }
+      body {
+        background-color: black;
+        margin: 50px;
+      }
+      body {
+        color: white;
+      }
+      .html-rainbow-text span {
+        font-family: Pointy_Demo;
+        font-size: 50px;
+      }
+    </style>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -50px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('Using Google Firebase and Google Cloud Platform.')">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <div class="html-rainbow-text" style="text-align: center;">
+      <span style="color:#ff1600">H</span><span style="color:#ff2c00">e</span><span style="color:#ff4200">l</span><span style="color:#ff5700">l</span><span style="color:#ff6d00">o</span><span style="color: transparent;text-shadow: none;"> </span><span style="color: transparent;text-shadow: none;"> <u></span><span id="name" style="color:#ffffff; font-size: 60px;"></span></u><span style="color:#ff9900">.</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#ffc500">H</span><span style="color:#ffdb00">e</span><span style="color:#fff000">r</span><span style="color:#f8ff00">e</span><span style="color:#e2ff00">'</span><span style="color:#ccff00">s</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#a0ff00">a</span><span style="color:#8aff00">l</span><span style="color:#75ff00">l</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#49ff00">t</span><span style="color:#33ff00">h</span><span style="color:#1dff00">e</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#00ff0f">i</span><span style="color:#00ff24">n</span><span style="color:#00ff3a">f</span><span style="color:#00ff50">o</span><span style="color:#00ff66">r</span><span style="color:#00ff7c">m</span><span style="color:#00ff92">a</span><span style="color:#00ffa8">t</span><span style="color:#00ffbd">i</span><span style="color:#00ffd3">o</span><span style="color:#00ffe9">n</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#00e9ff">w</span><span style="color:#00d3ff">e</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#00a8ff">g</span><span style="color:#0092ff">a</span><span style="color:#007cff">i</span><span style="color:#0066ff">n</span><span style="color:#0050ff">e</span><span style="color:#003aff">d</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#000fff">f</span><span style="color:#0700ff">r</span><span style="color:#1d00ff">o</span><span style="color:#3300ff">m</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#5f00ff">y</span><span style="color:#7500ff">o</span><span style="color:#8a00ff">u</span><span style="color:#a000ff">r</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#cc00ff">g</span><span style="color:#e200ff">o</span><span style="color:#f800ff">o</span><span style="color:#ff00f0">g</span><span style="color:#ff00db">l</span><span style="color:#ff00c5">e</span><span style="color: transparent;text-shadow: none;"> </span><span style="color:#ff0099">s</span><span style="color:#ff0083">i</span><span style="color:#ff006d">g</span><span style="color:#ff0057">n</span><span style="color:#ff0042">-</span><span style="color:#ff002c">i</span><span style="color:#ff0016">n</span><span style="color:#ff0000">.</span>
+    </div>
+    <h1 style="color: RAINBOW;" id="title"></h1>
+    <script>
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      var queryString = decodeURIComponent(window.location.search);
+      queryString = queryString.substring(1);
+      var queries = queryString.split("&");
+      // document.write("<img src=\"" + queries[4] + "\" style=\"border-radius: 50px;\"></img><br><br><br>");
+      // document.write("Email: " + queries[5] + "<br>");
+      // document.getElementById("email").value += queries[5]
+      // document.write("Full Name: " + queries[0] + "<br>");
+      // document.write("Account ID: " + queries[1] + "<br>");
+      document.getElementById("name").innerHTML = queries[2];
+      // document.write("First Name: " + queries[2] + "<br>");
+      // document.write("Last Name: " + queries[3] + "<br>");
+      setCookie("username", queries[2], 100000000000);
+    </script>
+    <fieldset>
+      <legend>Information</legend>
+      <p>
+        <label>Email</label>
+        <input type="text" id="email">
+        <script>
+          var queryString = decodeURIComponent(window.location.search);
+          queryString = queryString.substring(1);
+          var queries = queryString.split("&");
+          document.getElementById("email").value += queries[5]
+        </script>
+      </p>
+      <p>
+        <label>Full Name</label>
+        <input type="text" id="fullname">
+        <script>
+          var queryString = decodeURIComponent(window.location.search);
+          queryString = queryString.substring(1);
+          var queries = queryString.split("&");
+          document.getElementById("fullname").value += queries[0];
+        </script>
+      </p>
+      <p>
+        <label>First Name</label>
+        <input type="text" id="firstname">
+        <script>
+          var queryString = decodeURIComponent(window.location.search);
+          queryString = queryString.substring(1);
+          var queries = queryString.split("&");
+          document.getElementById("firstname").value += queries[2];
+        </script>
+      </p>
+      <p>
+        <label>Last Name</label>
+        <input type="text" id="lastname">
+        <script>
+          var queryString = decodeURIComponent(window.location.search);
+          queryString = queryString.substring(1);
+          var queries = queryString.split("&");
+          document.getElementById("lastname").value += queries[3];
+        </script>
+      </p>
+      <p>
+        <label>Profile Picture: <br><br></label>
+        <script>
+          var queryString = decodeURIComponent(window.location.search);
+          queryString = queryString.substring(1);
+          var queries = queryString.split("&");
+          document.write("<img src=\"" + queries[4] + "\" style=\"border-radius: 50px;\"></img>");
+        </script>
+      </p>
+      <p>
+        <label>Note:</label>
+        This is all of the information we can get for "free". If we want more, we have to get authenticated by google. If we want that, we need to pay $15-75k for a private evaluation.
+      </p>
+    </fieldset>
+    <script>
+      window.history.replaceState({}, document.title, "/Account-Page/");
+    </script>
+  </body>
+</html>

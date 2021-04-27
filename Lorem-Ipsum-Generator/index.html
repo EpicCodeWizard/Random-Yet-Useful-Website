@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lorem Ipsum Generator</title>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body style="margin: 50px; background-color: #ff8000; font-family: Garamond, serif;">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -50px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://www.lipsum.com/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <p>Input information below, and then you will be redirected to a website with the data you inputed in Lorem Ipsum. Try it out to see for yourself (I know this isn't the best instructions :) ).</p>
+    <form action="https://www.lipsum.com/feed/html" method="post">
+      <table style="width:100%">
+        <tr>
+          <td rowspan="2"><input id="amount" name="amount" size="3" type="text" value="5"></td>
+          <td rowspan="2">
+            <table style="text-align:left">
+              <tr>
+                <td style="width:20px"><input checked="checked" id="paras" name="what" type="radio" value="paras"></td>
+                <td><label for="paras">paragraphs</label></td>
+              </tr>
+              <tr>
+                <td style="width:20px"><input id="words" name="what" type="radio" value="words"></td>
+                <td><label for="words">words</label></td>
+              </tr>
+              <tr>
+                <td style="width:20px"><input id="bytes" name="what" type="radio" value="bytes"></td>
+                <td><label for="bytes">bytes</label></td>
+              </tr>
+              <tr>
+                <td style="width:20px"><input id="lists" name="what" type="radio" value="lists"></td>
+                <td><label for="lists">lists</label></td>
+              </tr>
+            </table>
+          </td>
+          <td style="width:20px"><input checked="checked" id="start" name="start" type="checkbox" value="yes"></td>
+          <td style="text-align:left"><label for="start">Start with 'Lorem<br>
+          ipsum dolor sit amet...'</label></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align:left"><input id="generate" name="generate" type="submit" value="Generate Lorem Ipsum"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

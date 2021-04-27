@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shutdown the Internet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body onload="preload('button-a.gif', 'button.gif')">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -10px 0px 0px -10px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From http://www.turnofftheinternet.com/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <center><h1>SHUTDOWN THE INTERNET</h1></center>
+    <table border="0" width="100%">
+      <tr>
+        <td align="center" valign="middle">
+          <table cellspacing="0" cellpadding="0" border="0" background="background.gif" width="347" height="411">
+            <tr>
+              <td height="75" nowrap>&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" height="100%" valign="top" width="100%">
+                <script>
+                  function preload() {
+                    if (!document.images) return;
+                    var ar = new Array();
+                    var arguments = preload.arguments;
+                    for (var i = 0; i < arguments.length; i++) {
+                      ar[i] = new Image();
+                      ar[i].src = arguments[i];
+                    }
+                  }
+
+                  function fullScreen(theURL) {
+                      window.open(theURL, '', 'fullscreen=yes, width="110%", height="100%", menubar=no, toolbar=no, scrollbars=no, resizable=no');
+                  }
+                  if (document.images) {
+                      img1on = new Image();
+                      img1on.src = "button-a.gif";
+                      img1off = new Image();
+                      img1off.src = "button.gif";
+                  }
+
+                  function timer() {
+                    setTimeout("fullScreen('shutdown.html')", 1500);
+                  }
+
+                  function imgOn(imgName) {
+                    if (document.images) {
+                        document[imgName].src = eval(imgName + "on.src");
+                    }
+                  }
+
+                  function imgOff(imgName) {
+                    if (document.images) {
+                        document[imgName].src = eval(imgName + "off.src");
+                    }
+                  }
+                </script>
+                <a href="#" onclick="imgOn('img1');timer()" onfocus="if (this.blur) this.blur()" onmouseout="imgOff('img1')">
+                  <img border="0" height="119" hspace="0" id="img1" name="img1" src="button.gif" width="134">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html> 

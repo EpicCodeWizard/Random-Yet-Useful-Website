@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Yet Useful Things</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAWwG-0uP1Z0g37jHgtvKB3tXwXL-eEvhA",
+        authDomain: "random-yet-useful-website.firebaseapp.com",
+        projectId: "random-yet-useful-website",
+        storageBucket: "random-yet-useful-website.appspot.com",
+        messagingSenderId: "35781155056",
+        appId: "1:35781155056:web:d3ff6d0ff154dafd2d8a35",
+        measurementId: "G-ZZ1QQR9XL2"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script> -->
+    <script src="https://apis.google.com/js/api:client.js"></script> 
+    <script>
+      var googleUser = {};
+      var startApp = function() {
+        gapi.load('auth2', function(){
+          auth2 = gapi.auth2.init({
+            client_id: '35781155056-6uq735v8ucjqqcp440adabj69rjgj2tt.apps.googleusercontent.com',
+            redirect_uri: '/accountpage.html',
+            cookiepolicy: 'single_host_origin',
+          });
+          attachSignin(document.getElementById('customBtn'));
+        });
+      };
+
+      function attachSignin(element) {
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+              console.log("Information from google sign-in:\n" + "Full Name: " + googleUser.getBasicProfile().getName() + '\nID: ' + googleUser.getBasicProfile().getId() + '\nGiven Name: ' + googleUser.getBasicProfile().getGivenName() + '\nFamily Name: ' + googleUser.getBasicProfile().getFamilyName() + '\nImage URL: ' + googleUser.getBasicProfile().getImageUrl() + '\nEmail: ' + googleUser.getBasicProfile().getEmail());
+              var queryString = "?" + googleUser.getBasicProfile().getName() + '&' + googleUser.getBasicProfile().getId() + '&' + googleUser.getBasicProfile().getGivenName() + '&' + googleUser.getBasicProfile().getFamilyName() + '&' + googleUser.getBasicProfile().getImageUrl() + '&' + googleUser.getBasicProfile().getEmail();
+              window.location.href = "accountpage.html" + queryString;
+            }, function(error) {
+              var error = JSON.stringify(error, undefined, 2);
+              if ((error.slice(14,-3)) === "popup_closed_by_user") {
+                alert("You have closed the pop-up.")
+              } else {
+                alert("Error:\n" + error.slice(14,-3));
+              }
+            });
+      }
+    </script>
+    <script>
+      startApp();
+    </script>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: 30px 0px 0px; height: 47px;">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('Windows 8 Metro UI from https://codepen.io/pedox/embed/DimhI. Multiple websites and editors used to create icons.')">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <div class="container">
+      <br><br><br><br><br>
+      <h1 id="title"></h1>
+      <div class="right"></div>
+      <div class='spacer'>
+        <p id="demo"></p>
+        <script>
+          function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+          }
+
+          function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+              }
+            }
+            return "";
+          }
+
+          function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+              document.getElementById("title").innerHTML = "Hello " + user + "! This is The Random Yet Useful Website. This website consists of helpful tools, fun games, and much more! Click any button and enjoy!";
+            } else {
+              user = prompt("Please input your permanent name in the box below. To modify it, click the button with the gray user picture on it.");
+              if (user != "" && user != null) {
+                setCookie("username", user, 100000000000);
+                document.getElementById("title").innerHTML = "Hello " + user + "! This is The Random Yet Useful Website. This website consists of helpful tools, fun games, and much more! Click any button and enjoy!";
+              } else {
+                document.getElementById("title").innerHTML = "Hello! This is The Random Yet Useful Website. This website consists of helpful tools, fun games, and much more! Click any button and enjoy!";
+              }
+            }
+          }
+          
+          checkCookie()
+        </script>
+        <a class='wide blue' href="./TinyURL-Maker"><center><img class="icon-home" src="ICON-TinyURL.png" style="margin: 25px 0px 0px 0px;"></img></center><h2>TinyURL</h2></a>
+        
+        <a class='wide orange' href="./Dice-Roller"><center><img class="icon-cog" src="ICON-Dice.png" style="margin: -90px 0px 0px -15px; width: 300px;"></img></center><h2>Dice Rolling Simulator</h2></a>
+        
+        <a class='box redgay' href="./Camera"><center><img class="icon-home" src="ICON-CameraColor.png" style="width: 110px;"></img></center>
+        <h2>Camera Preview</h2></a>
+        
+        <a class='box lime' href="./Cam-Recorder"><center><img class="icon-home" src="ICON-Mic.png" style="width: 80px;"></img></center>
+        <h2>Recorder via Camera</h2></a>
+        
+        <div class="customGPlusSignIn" id="customBtn"><a class='box yellow'><center><img class="icon-map-marker" src="ICON-Google.png" style="width: 100px;"></img></center>
+        <h2>Sign-In With Google</h2></a></div>
+        
+        <a class='box redgay' href="./Audio-Computer-Hear"><center><img class="icon-globe" src="ICON-Computer.png" style="width: 120px;"></img></center>
+        <h2>Computer Audio Hearing</h2></a>
+        
+        <a class='box orange' href="./Audio-Preview"><center><img class="icon-envelope-alt" src="ICON-Audio.png" style="width: 110px;"></img></center>
+        <h2>Audio Preview</h2></a>
+        
+        <a class='box lime' href="./Audio-Volume-Bars"><center><img class="icon-envelope-alt" src="ICON-Volume-Bar.png" style="width: 110px; margin: -17px 0px 0px 0px;"></img></center>
+        <h2>Audio Volume Preview on Bars</h2></a>
+
+        <a class='box orange' href="./Flappy-Bird"><center><img class="icon-envelope-alt" src="ICON-Flappy.png" style="width: 130px; margin: 5px 0px 0px -5px;"></img></center><h2>Flappy Bird</h2></a>
+        
+        <a class='box redgay' href="./Cam-Take-Pic"><center><img class="icon-envelope-alt" src="ICON-Camera.png" style="width: 128px; margin: -10px 0px 0px -4px;"></img></center><h2>Take a Pic with Cam</h2></a>
+
+        <a class='box yellow' href="./Cam-Take-Pic-Filters"><center><img class="icon-envelope-alt" src="ICON-Filters.png" style="width: 125px;"></img></center><h2>Take a Pic with Cam and Filters</h2></a>
+
+        <a class='box orange' href="./DifferentInput"><center><img class="icon-envelope-alt" src="ICON-Input.png" style="width: 90px;"></img></center><h2>Different Computer Inputs</h2></a>
+
+        <a class='box lime' href="./Ztype"><center><img class="icon-heart" src="ICON-Keyboard.png" style="width: 90px;"></img></center><h2>Ztype (Typing Game, <b><u>VERY</u></b> fun)</h2></a>
+
+        <a class='wide orange' href="./Emoji-List"><center><img class="icon-cog" src="ICON-Emoji.png" style="width: 200px;"></img></center><h2>FULL LIST OF EMOJIS</h2></a>
+        
+        <a class='box lime' href="./End-Internet-1"><center><img class="icon-heart" src="ICON-Internet.png" style="width: 90px;"></img></center><h2>End of the Internet Funny 1</h2></a>
+
+        <a class='box redgay' href="./End-Internet-2"><center><img class="icon-heart" src="ICON-Internet.png" style="width: 90px;"></img></center><h2>End of the Internet Funny 2</h2></a>
+        
+        <a class='box lime' href="./End-Internet-3"><center><img class="icon-heart" src="ICON-Internet.png" style="width: 90px;"></img></center><h2>End of the Internet Funny 3</h2></a>
+
+        <a class='wide blue' href="./End-Internet-4"><center><img class="icon-heart" src="ICON-Internet.png" style="width: 100px;"></img></center><h2>End of the Internet Funny 4</h2></a>
+        
+        <a class='box lime' href="./ShadyURl-Website-Creator"><center><img class="icon-heart" src="ICON-Shady.png" style="width: 90px;"></img></center><h2>Shady Website URL Link Creator</h2></a>
+
+        <a class='box redgay' href="./RhymeZone"><center><img class="icon-heart" src="ICON-RZ.png" style="width: 85px;"></img></center><h2>RhymeZone Sample Form</h2></a>
+
+        <a class='box yellow' href="./Convert-Cases"><center><img class="icon-envelope-alt" src="ICON-Cases.png" style="width: 125px;"></img></center><h2>Convert Text Cases</h2></a>
+
+        <a class='wide orange' href="./ShadyURLMaker"><center><img class="icon-heart" src="ICON-Shady.png" style="width: 100px;"></img></center><h2>Scary and Shady URL Maker</h2></a>
+
+        <a class='wide blue' href="./TypesOfCursors"><center><img class="icon-heart" src="ICON-Cursor.png" style="width: 110px;"></img></center><h2>Types of Cursors</h2></a>
+
+        <a class='box redgay' href="./8D-Audio-Maker"><center><img class="icon-heart" src="ICON-8DAudio.png" style="width: 105px;"></img></center><h2>8D Audio Maker</h2></a>
+
+        <a class='box lime' href="./Keypress-Detector"><center><img class="icon-heart" src="ICON-Keyboard.png" style="width: 90px;"></img></center><h2>Keypress Detector</h2></a>
+
+        <a class='wide yellow' href="./Infinite-Zooming-Image-1"><center><img src="ICON-Image.png" style="width: 125px; margin: -10px 0px 0px 0px;"></img></center><h2>Infinite Zooming Image 1</h2></a>
+
+        <a class='wide blue' href="./Infinite-Zooming-Image-2"><center><img src="ICON-Image.png" style="width: 125px; margin: -10px 0px 0px 0px;"></img></center><h2>Infinite Zooming Image 2</h2></a>
+
+        <a class='box redgay' href="./Fidget-Spinner-Simulator"><center><img src="ICON-FidgetSpinner.gif" style="width: 250px; margin: -85px 0px 0px -65px;"></img></center><h2>Fidget Spinner Simulator</h2></a>
+
+        <a class='box orange' href="./Stopwatch"><center><img class="icon-envelope-alt" src="ICON-Stopwatch.png" style="width: 90px; margin: 5px 0px 0px 0px;"></img></center><h2>Stopwatch</h2></a>
+
+        <a class='wide lime' href="./Minecraft"><center><img class="icon-envelope-alt" src="ICON-Minecraft.png" style="width: 115px;"></img></center><h2>Minecraft</h2></a>
+
+        <a class='box blue' href="./ToDo-App"><center><img src="ICON-ToDo.png" style="width: 100px;"></img></center><h2>To-Do App</h2></a>
+      </div>
+      <div class='spacer spacer3x' style="margin-top: 15px;">
+        <a class='box blue' href="./Cam-Mirror"><center><img class="icon-camera" src="ICON-Mirror.png" style="width: 80px;"></img></center>
+        <h2>Mirror Camera Preview</h2></a>
+        
+        <button class='box bluefish' style="width: 140px; height: 140px; border: hidden;" id="changename" onclick='user = prompt("Please input your new name in the box below."); if (user != "" && user != null) {setCookie("username", user, 100000000000); location.reload();}'><a class='box bluefish'><img src="ICON-User.png" class="icon-facetime-video" style="width: 105px; margin: -10px -10px -10px -43px;" ></img>
+        <h2></h2></a></button>
+        
+        <a class='box redgay' href="./Blank-Characters">
+        <h2>Blank Characters Copy Paste</h2></a>
+        
+        <a class='box magenta' href="./Bookmarklets"><center><img class="icon-camera" src="ICON-Bookmark.png" style="width: 100px;"></img></center><h2>List of Bookmarklets</h2></a>
+
+        <a class='box blue' href="./How-Secure-Is-My-Password"><center><img src="ICON-Password.png" style="width: 90px;"></img></center><h2>Test Password Security</h2></a>
+
+        <a class='box bluefish' href="./Image-Size-Finder-Upload"><center><img src="ICON-ImageSize.png" style="width: 100px;"></img></center><h2>Image Size Finder</h2></a>
+
+        <a class='box redgay' href="./Lorem-Ipsum-Generator"><center><img src="ICON-Lorem-Ipsum.png" style="width: 85px;"></img></center><h2>Lorem Ipsum Generator</h2></a>
+
+        <a class='box orange' href="./ChatApp"><center><img class="icon-envelope-alt" src="ICON-Chat.png" style="width: 110px;"></img></center><h2>Chat App</h2></a>
+        
+        <a class='wide yellow' href="./Screen-Preview"><center><img src="ICON-Share-Screen.png" style="width: 110px;"></img></center><h2>Share Screen Preview</h2></a>
+
+        <a class='box lime' href="./Toilet-Paper-Simulation"><center><img class="icon-heart" src="ICON-TP.png" style="width: 90px;"></img></center><h2>Toilet Paper Simulator</h2></a>
+
+        <a class='box orange' href="./RGB"><center><img class="icon-envelope-alt" src="ICON-RGB.png" style="width: 110px;"></img></center><h2>RGB</h2></a>
+
+        <a class='box redgay' href="./Silk-Art-Maker"><center><img src="ICON-Art.png" style="width: 85px; margin: 10px 0px 0px 0px;"></img></center><h2>Silk Art Maker</h2></a>
+
+        <a class='box blue' href="./Plasma-Globe-Simulator"><center><img src="ICON-PlasmaGlobe.png" style="width: 90px; margin: -5px 0px 0px 0px;"></img></center><h2>Plasma Globe Simulator</h2></a>
+
+        <a class='box yellow' href="./Latest-News"><center><img class="icon-envelope-alt" src="ICON-News.png" style="width: 100px;"></img></center><h2>Latest News</h2></a>
+
+        <a class='box lime' href="./Counter"><center><img class="icon-heart" src="ICON-Counter.png" style="width: 90px; margin: 10px 0px 0px 0px;"></img></center><h2>Counter</h2></a>
+      </div>
+    </div>
+  </body>
+</html>

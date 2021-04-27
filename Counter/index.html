@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -10px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('Not made by this website, just a basic counter, found on the Internet, but HEAVILY changed.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+		<div class="display">
+			<h1>Counter</h1>
+			<div id="subtitle">
+				<h2 class="tallyCount" id="tally"></h2>
+				<div class="btn-bar">
+					<button id="minusBtn">-</button>
+          <button id="plusBtn">+</button>
+          <button id="resetBtn">Reset</button>
+				</div>
+			</div>
+		</div>
+    <script src="script.js"></script>
+	</body>
+</html>

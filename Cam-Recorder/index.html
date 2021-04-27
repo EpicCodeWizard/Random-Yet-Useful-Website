@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet">
+		<title>Camera Recorder</title>
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -16px 0px 0px -17px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://webrtc.github.io/samples/src/content/getusermedia/record/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+		<video autoplay="" id="gum"></video>
+		<video id="recorded"></video>
+		<button id="start">Start camera</button>
+		<button disabled id="record">Start Recording</button>
+		<button disabled id="play">Play</button>
+		<button disabled id="download">Download</button>
+		<p style="color: black;">Echo cancellation: <input id="echoCancellation" type="checkbox"></p>
+		<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+		<script async src="https://webrtc.github.io/samples/src/content/getusermedia/record/js/main.js"></script>
+	</body>
+</html>

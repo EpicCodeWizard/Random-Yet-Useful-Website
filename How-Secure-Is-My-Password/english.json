@@ -1,0 +1,504 @@
+{
+  "header": {
+    "title": "How Secure Is My Password?"
+  },
+  "input": {
+    "placeholder": "ENTER PASSWORD"
+  },
+  "result": {
+    "regular": {
+      "pre": "It would take a computer about",
+      "post": "to crack your password",
+      "advertising": null,
+      "tweet_pre": null,
+      "tweet_post": null
+    },
+    "bad": {
+      "pre": "It would take a computer about",
+      "post": "to crack your password",
+      "advertising": null,
+      "tweet_pre": null,
+      "tweet_post": null
+    },
+    "ok": {
+      "pre": "It would take a computer about",
+      "post": "to crack your password",
+      "advertising": null,
+      "tweet_pre": null,
+      "tweet_post": null
+    },
+    "instant": {
+      "pre": "Your password would be cracked",
+      "post": null,
+      "advertising": null,
+      "tweet_pre": null,
+      "tweet_post": null
+    },
+    "infinite": {
+      "pre": "It would take a computer",
+      "post": "to crack your password",
+      "advertising": null,
+      "tweet_pre": null,
+      "tweet_post": null
+    }
+  },
+  "advertising": {
+    "links": {
+      "web": null,
+      "ios": null,
+      "android": null
+    },
+    "img": null,
+    "check": {
+      "title": "Password Checker",
+      "message": "Type in the box above. This website is made by Mark Burnett, and recovered and used by the Helpful Tools and Games website."
+    }
+  },
+  "footer": {
+    "top10k": null,
+    "typefaces": null,
+    "translationBy": null,
+    "disclaimer": null
+  },
+  "forever": "Forever",
+  "instantly": "Instantly",
+  "checks": [
+    {
+      "id": "common",
+      "name": "Common Password: In the top {{ value }} most used passwords",
+      "message": "<p>Your password is very commonly used. It would be cracked almost instantly</p><p><a style=\"cursor: pointer;\">Tip: Learn how to create and remember unique, secure passwords for each of your online accounts.</a></p>"
+    },
+    {
+      "id": "xkcd",
+      "name": "xkcd",
+      "message": "<p>I suspect the password crackers might be on to this one by now...</p><p><a style=\"cursor: pointer;\">Tip: Use an online password generator to generate unique passwords for all of your online accounts.</a></p>"
+    },
+    {
+      "id": "jeff",
+      "name": "There's always a back door...",
+      "message": "<p>\"The guy who made the software was called Jeff Jeffty Jeff. Born on the first of Jeff, nineteen-jeffty-jeff.\"</p><p><a style=\"cursor: pointer;\">Tip: Use an online password generator to generate unique passwords for all of your online accounts.</a></p>"
+    },
+    {
+      "id": "length.very-short",
+      "name": "Length: Very short",
+      "message": "<p>Your password is very short. The longer a password is the more secure it will be</p><p><a style=\"cursor: pointer;\">Tip: Create longer, unique passwords that you'll never forget.</a></p>"
+    },
+    {
+      "id": "possibly-word",
+      "name": "Possibly a word",
+      "message": "<p>Your password looks like it could be a dictionary word or a name. If it's a name with personal significance it might be easy to guess. If it's a dictionary word it could be cracked very quickly.</p><p><a style=\"cursor: pointer;\">Tip: More unique, randomized passwords will keep your accounts more secure.</a></p>"
+    },
+    {
+      "id": "just.numbers",
+      "name": "Character Variety: Just Numbers",
+      "message": "<p>Your password only contains numbers. This reduces the number of possible combinations dramatically.</p><p><a style=\"cursor: pointer;\">Tip: Create and remember more complex passwords to secure your digital identity.</a></p>"
+    },
+    {
+      "id": "just.alphanumeric",
+      "name": "Possibly a Word and a Number",
+      "message": "<p>Your password looks like it might just be a word and a few digits. This is a very common pattern and would be cracked very quickly.</p><p><a style=\"cursor: pointer;\">Tip: Prevent hackers from accessing your data with secure, complex passwords.</a></p>"
+    },
+    {
+      "id": "length.short",
+      "name": "Length: Short",
+      "message": "<p>Your password is quite short. The longer a password is the more secure it will be.</p><p><a style=\"cursor: pointer;\">Tip: Create longer, unique passwords that you'll never forget.</a></p>"
+    },
+    {
+      "id": "just.letters",
+      "name": "Character Variety: Just Letters",
+      "message": "<p>Your password only contains letters. Adding numbers and symbols can make your password more secure.</p><p><a style=\"cursor: pointer;\">Tip: Use complex passwords to keep all of your online accounts secure.</a></p>"
+    },
+    {
+      "id": "no.symbols",
+      "name": "Character Variety: No Symbols",
+      "message": "<p>Your password only contains numbers and letters. Adding a symbol can make your password more secure. Don't forget you can often use spaces in passwords.</p><p><a style=\"cursor: pointer;\">Tip: Easily remember more complex passwords with numbers, letters, and symbols.</a></p>"
+    },
+    {
+      "id": "just.telephone",
+      "name": "Possibly a Telephone Number / Date",
+      "message": "<p>Your password looks like it might be a telephone number or a date. If it is and it has personal significance then it might be very easy for someone to guess.</p><p><a style=\"cursor: pointer;\">Tip: Use an online password generator to generate unique passwords for all of your online accounts.</a></p>"
+    },
+    {
+      "id": "repeated-pattern",
+      "name": "Repeated Pattern",
+      "message": "<p>Repeated characters or patterns can make your password more predictable.</p><p><a style=\"cursor: pointer;\">Tip: Stump hackers with randomized passwords that you'll never forget.</a></p>"
+    },
+    {
+      "id": "non-standard-characters",
+      "name": "Character Variety: Non-Standard Characters",
+      "message": "<p>Your password contains a non-keyboard character. This should make it more secure.</p><p><a style=\"cursor: pointer;\">Tip: Never forget your complex, secure password by using a password manager.</a></p>"
+    },
+    {
+      "id": "length.long",
+      "name": "Length: Long",
+      "message": "<p>Your password is over sixteen characters long.</p><p><a style=\"cursor: pointer;\">Tip: Never forget your long, secure password by using a password manager.</a></p>"
+    }
+  ],
+  "numbers": [
+    {
+      "name": "hundred",
+      "value": 2
+    },
+    {
+      "name": "thousand",
+      "value": 3
+    },
+    {
+      "name": "million",
+      "value": 6
+    },
+    {
+      "name": "billion",
+      "value": 9
+    },
+    {
+      "name": "trillion",
+      "value": 12
+    },
+    {
+      "name": "quadrillion",
+      "value": 15
+    },
+    {
+      "name": "quintillion",
+      "value": 18
+    },
+    {
+      "name": "sextillion",
+      "value": 21
+    },
+    {
+      "name": "septillion",
+      "value": 24
+    },
+    {
+      "name": "octillion",
+      "value": 27
+    },
+    {
+      "name": "nonillion",
+      "value": 30
+    },
+    {
+      "name": "decillion",
+      "value": 33
+    },
+    {
+      "name": "undecillion",
+      "value": 36
+    },
+    {
+      "name": "duodecillion",
+      "value": 39
+    },
+    {
+      "name": "tredecillion",
+      "value": 42
+    },
+    {
+      "name": "quattuordecillion",
+      "value": 45
+    },
+    {
+      "name": "quindecillion",
+      "value": 48
+    },
+    {
+      "name": "sexdecillion",
+      "value": 51
+    },
+    {
+      "name": "septendecillion",
+      "value": 54
+    },
+    {
+      "name": "octodecillion",
+      "value": 57
+    },
+    {
+      "name": "novemdecillion",
+      "value": 60
+    },
+    {
+      "name": "vigintillion",
+      "value": 63
+    },
+    {
+      "name": "unvigintillion",
+      "value": 66
+    },
+    {
+      "name": "duovigintillion",
+      "value": 69
+    },
+    {
+      "name": "tresvigintillion",
+      "value": 72
+    },
+    {
+      "name": "quattuorvigintillion",
+      "value": 75
+    },
+    {
+      "name": "quinquavigintillion",
+      "value": 78
+    },
+    {
+      "name": "sesvigintillion",
+      "value": 81
+    },
+    {
+      "name": "septemvigintillion",
+      "value": 84
+    },
+    {
+      "name": "octovigintillion",
+      "value": 87
+    },
+    {
+      "name": "novemvigintillion",
+      "value": 90
+    },
+    {
+      "name": "trigintillion",
+      "value": 93
+    },
+    {
+      "name": "untrigintillion",
+      "value": 96
+    },
+    {
+      "name": "duotrigintillion",
+      "value": 99
+    },
+    {
+      "name": "googol",
+      "value": 100
+    },
+    {
+      "name": "trestrigintillion",
+      "value": 102
+    },
+    {
+      "name": "quattuortrigintillion",
+      "value": 105
+    },
+    {
+      "name": "quinquatrigintillion",
+      "value": 108
+    },
+    {
+      "name": "sestrigintillion",
+      "value": 111
+    },
+    {
+      "name": "septentrigintillion",
+      "value": 114
+    },
+    {
+      "name": "octotrigintillion",
+      "value": 117
+    },
+    {
+      "name": "noventrigintillion",
+      "value": 120
+    },
+    {
+      "name": "quadragintillion",
+      "value": 123
+    },
+    {
+      "name": "quinquagintillion",
+      "value": 153
+    },
+    {
+      "name": "sexagintillion",
+      "value": 183
+    },
+    {
+      "name": "septuagintillion",
+      "value": 213
+    },
+    {
+      "name": "octogintillion",
+      "value": 243
+    },
+    {
+      "name": "nonagintillion",
+      "value": 273
+    },
+    {
+      "name": "centillion",
+      "value": 303
+    },
+    {
+      "name": "uncentillion",
+      "value": 306
+    },
+    {
+      "name": "duocentillion",
+      "value": 309
+    },
+    {
+      "name": "trescentillion",
+      "value": 312
+    },
+    {
+      "name": "decicentillion",
+      "value": 333
+    },
+    {
+      "name": "undecicentillion",
+      "value": 336
+    },
+    {
+      "name": "viginticentillion",
+      "value": 363
+    },
+    {
+      "name": "unviginticentillion",
+      "value": 366
+    },
+    {
+      "name": "trigintacentillion",
+      "value": 393
+    },
+    {
+      "name": "quadragintacentillion",
+      "value": 423
+    },
+    {
+      "name": "quinquagintacentillion",
+      "value": 453
+    },
+    {
+      "name": "sexagintacentillion",
+      "value": 483
+    },
+    {
+      "name": "septuagintacentillion",
+      "value": 513
+    },
+    {
+      "name": "octogintacentillion",
+      "value": 543
+    },
+    {
+      "name": "nonagintacentillion",
+      "value": 573
+    },
+    {
+      "name": "ducentillion",
+      "value": 603
+    },
+    {
+      "name": "trecentillion",
+      "value": 903
+    },
+    {
+      "name": "quadringentillion",
+      "value": 1203
+    },
+    {
+      "name": "quingentillion",
+      "value": 1503
+    },
+    {
+      "name": "sescentillion",
+      "value": 1803
+    },
+    {
+      "name": "septingentillion",
+      "value": 2103
+    },
+    {
+      "name": "octingentillion",
+      "value": 2403
+    },
+    {
+      "name": "nongentillion",
+      "value": 2703
+    },
+    {
+      "name": "millinillion",
+      "value": 3003
+    }
+  ],
+  "periods": [
+    {
+      "singular": "yoctosecond",
+      "plural": "yoctoseconds",
+      "seconds": 1e-24
+    },
+    {
+      "singular": "zeptosecond",
+      "plural": "zeptoseconds",
+      "seconds": 1e-21
+    },
+    {
+      "singular": "attosecond",
+      "plural": "attoseconds",
+      "seconds": 1e-18
+    },
+    {
+      "singular": "femtosecond",
+      "plural": "femtoseconds",
+      "seconds": 1e-15
+    },
+    {
+      "singular": "picosecond",
+      "plural": "picoseconds",
+      "seconds": 1e-12
+    },
+    {
+      "singular": "nanosecond",
+      "plural": "nanoseconds",
+      "seconds": 1e-9
+    },
+    {
+      "singular": "microsecond",
+      "plural": "microseconds",
+      "seconds": 0.000001
+    },
+    {
+      "singular": "millisecond",
+      "plural": "milliseconds",
+      "seconds": 0.001
+    },
+    {
+      "singular": "second",
+      "plural": "seconds",
+      "seconds": 1
+    },
+    {
+      "singular": "minute",
+      "plural": "minutes",
+      "seconds": 60
+    },
+    {
+      "singular": "hour",
+      "plural": "hours",
+      "seconds": 3600
+    },
+    {
+      "singular": "day",
+      "plural": "days",
+      "seconds": 86400
+    },
+    {
+      "singular": "week",
+      "plural": "weeks",
+      "seconds": 604800
+    },
+    {
+      "singular": "month",
+      "plural": "months",
+      "seconds": 2626560
+    },
+    {
+      "singular": "year",
+      "plural": "years",
+      "seconds": 31557600
+    }
+  ]
+}

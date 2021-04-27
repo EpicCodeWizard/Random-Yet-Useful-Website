@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TinyURL Maker</title>
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body style="background-color: #00b3ff;">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -50px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From an older version of https://tinyurl.com/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <p>Make your own TinyURL! If nothing shows up after you click "Make TinyURL!", then an error has occured. A successful TinyURL will pop-up under the box to share with your friends.</p>
+		<div class="create-form" name="f" id="f">
+			<form action="https://tinyurl.com/create.php">
+        <b>Enter a long URL to make tiny:</b><br>
+        <input id="source" name="source" type="hidden" value="index"> <input id="url" name="url" type="text" value="">
+        <input type="submit" value="Make TinyURL!" onclick="maketiny()">
+        <hr>
+        Custom alias (optional):<br>
+        <tt class="basecontent">https://tinyurl.com/</tt>
+        <input id="alias" maxlength="30" name="alias" type="text" value=""><br>
+        <small>May contain letters, numbers, and dashes.</small>
+      </form>
+		</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <p id="test"></p>
+    <script>
+      function maketiny() {
+        const URL_TO_STATIC_TXT = "https://tinyurl.com/api-create.php?source=index&url=" + document.getElementById("url").value + "&alias=" + document.getElementById("alias").value;
+        $.ajax({ url: URL_TO_STATIC_TXT })
+          .done(data => {document.getElementById("test").innerHTML = "<a href=\"" + data + "\" target=\"_blank\">" + data + "</a>"});
+      }
+    </script>
+		<style>
+      body, html {
+        height: 100%
+      }
+      .wrapper {
+        min-height: 100%;
+        margin: 0 auto -44px
+      }
+      .footer, .push {
+        height: 44px
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 80%;
+        color: #000;
+        background-color: #fff;
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif
+      }
+      body.nospam {
+        background-color: #ccf;
+        margin: 8px
+      }
+      body.blacklisted {
+        background-color: #f1f0ff;
+        margin: 8px
+      }
+      td {
+        font-size: 80%;
+        margin: 0;
+        color: #000;
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif
+      }
+      .blacklisted td, .nospam td {
+        font-size: inherit
+      }
+      .header {
+        padding: 10px;
+        background-color: #0a2746;
+        color: #fff;
+        font-size: 14px
+      }
+      .header a {
+        font-size: 50px;
+        text-decoration: none;
+        color: #fff
+      }
+      .header h1 {
+        margin: 0
+      }
+      .leftpane {
+        width: 170px;
+        float: left;
+        margin-left: 3px;
+        margin-top: 3px
+      }
+      .sidebar {
+        width: 150px;
+        padding: 10px 0 10px 10px;
+        margin: 2px;
+        font-size: 13px;
+        background-color: #0a2746;
+        color: #fff
+      }
+      .sidebar div {
+        padding-bottom: 12px
+      }
+      .sidebar a {
+        color: #fff;
+        font-weight: 700
+      }
+      .sidebar a:hover, .sidebar a:visited {
+        color: #fff
+      }
+      .mainpane {
+        margin-left: 170px;
+        padding-top: 5px
+      }
+      .topbanner {
+        background-color: #f1f0ff;
+        padding: 3px 0
+      }
+      .topad {
+        height: 92px;
+        width: 728px;
+        margin: 2px auto
+      }
+      .maincontent {
+        padding-top: 10px;
+        padding-left: 7px;
+        padding-right: 10px
+      }
+      .rightad {
+        float: right;
+        width: 300px;
+        height: 610px;
+        padding: 17px 10px 12px 15px
+      }
+      #div-gpt-ad-1361894497480-0 {
+        width: 300px;
+        height: 600px
+      }
+      #contentContainer {
+        padding-right: 5px
+      }
+      .footer {
+        margin-top: 45px;
+        padding: 5px;
+        background-color: #0a2746
+      }
+      .footer a, .footer div {
+        font-size: 14px;
+        color: #fff
+      }
+      .privacy {
+        float: right;
+        padding-right: 15px
+      }
+      .indent {
+        margin: 1em 2em
+      }
+      .bgcolor1 {
+        background-color: #f1f0ff
+      }
+      .bgcolor2 {
+        background-color: #fff0e1
+      }
+      #komoona {
+        float: right;
+        padding-left: 60px;
+        padding-right: 10px;
+        width: 320px
+      }
+      .create-form {
+        width: 320px;
+        margin: 0 auto;
+        padding: 6px;
+        background: #e7e7f7;
+        overflow: hidden
+      }
+      #url {
+        width: 185px
+      }
+      #submit {
+        width: 110px
+      }
+      #alias {
+        width: 90px
+      }
+      .create-error {
+        background: #e7e7f7;
+        width: 80%
+      }
+      .row {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        float: left
+      }
+      .row:after {
+        clear: both
+      }
+      .col-md-4 {
+        min-height: 1px;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 160px
+      }
+      img.upsell {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 65px;
+        height: 65px
+      }
+      .upgrade_upsell_header {
+        font-size: 14pt;
+        margin-bottom: 20px
+      }
+      .upgrade_upsell, .upgrade_upsell_header {
+        font-family: Arial;
+        color: #231f20;
+        text-align: center
+      }
+      .upgrade_upsell {
+        font-size: 8pt
+      }
+      img.upgrade {
+        margin-top: 25px;
+        height: 36px
+      }
+      .longurl {
+        width: 450px;
+        word-wrap: break-word
+      }
+      .longurl_err {
+        width: 500px;
+        word-wrap: break-word
+      }
+      .affiliate {
+        width: 420px;
+        margin: 10px auto;
+        padding: 5px;
+        font-size: 80%;
+        background-color: #e7e7f7;
+        overflow: hidden
+      }
+      .copybutton {
+        text-align: center;
+        border: 1px solid #000;
+        background-color: #ccc;
+        margin: 10px;
+        padding: 10px;
+        width: 200px
+      }
+      #success {
+        margin-left: 40px;
+        display: inline
+      }
+      #copy_div {
+        display: none;
+        margin-left: 5px
+      }
+      #alert_new_ui {
+        text-align: right;
+        padding: 0 1rem 0 0;
+        margin: 0;
+        color: #9a7c1f;
+        background-color: #fff3cd;
+        position: relative;
+        border: 1px solid #ffeeba;
+        border-radius: .25rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: Lato, sans-serif;
+        display: none
+      }
+      #alert_new_ui a {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent
+      }
+      #alert_new_ui a:hover {
+        color: #0056b3;
+        text-decoration: underline
+      }
+      a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        color: initial;
+      }
+      body {
+        margin: 50px;
+      }
+		</style>
+	</body>
+</html>

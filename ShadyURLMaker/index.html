@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ShadyURL</title>
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body style="margin: 50px; font-family: 'Courier New', monospace; background-color: #00ff04;">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -50px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('Using the verylegit.link API.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <script>
+      function create() {
+        var userinputurl = document.getElementById("long_url").value;
+        fetch('https://verylegitlink-fetch.sarveshsaharsh.repl.co/?URL=' + userinputurl)
+          .then(
+            function(response) {
+              if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' +
+                  response.status);
+                return;
+              }
+
+              response.json().then(function(data) {
+                var URL23 = data.sketchyURL;
+                if (URL23.includes("OAEN")) {
+                  document.getElementById("hyperlink").innerHTML = "Your URL input box is empty. Try again."
+                } else if (URL23.startsWith("http://")) {
+                  URL23 = URL23.replace("http://","https://");
+                  document.getElementById("hyperlink").innerHTML = "<a href=\"" + URL23 + "\" target=\"_blank\">" + URL23 + "</a>";
+                } else {
+                  document.getElementById("hyperlink").innerHTML = "<a href=\"https://" + URL23 + "\" target=\"_blank\">https://" + URL23 + "</a>";
+                }
+              });
+            }
+          )
+          .catch(function(err) {
+            console.log('Fetch Error:', err);
+          });
+      }
+    </script>
+    <p>Input you're URL below, and then you will get a very ShadyURL back, but in fact it's just a normal redirect to the URL you have inputed. The shadyURL will be hyperlinked and ready, and will appear below the text box. Sample link which goes to <a href="https://google.com" target="_blank">https://google.com</a>: <a href="https://win2003.verylegit.link/i8tROIlogin_290paypal!creditcard!.rar.swf.docm" target="_blank">https://win2003.verylegit.link/i8tROIlogin_290paypal!creditcard!.rar.swf.docm</a>. In some browsers, some URLs will be interpreted as malicious, so press the submit button again for a different URL. For a different URL, just change the URL in the input box and press the submit button again.</p>
+    <form name="mainform">
+			<input id="long_url" name="long_url" type="text">
+			<input type="button" value="Submit" onclick="create()">
+		</form>
+    <p id="hyperlink"></p>
+	</body>
+</html>

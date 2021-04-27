@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <title>Convert Cases (Upper Case, Lower Case, Alternating Case, and many more!)</title>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: 0px 0px 0px 0px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://convertcase.net/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <div class="wrapper" role="main">
+      <div id="container">
+
+        <h1>Accidentally left the caps lock on and typed something, but can't be bothered to start again and retype it all?</h1>
+        <p><label for="content">Simply enter your text and choose the case you want to convert it to.</label></p>
+
+        <form action="/" method="post">
+          <div class="row">
+            <textarea autofocus="" id="content" placeholder="Type or paste your content here"></textarea>
+          </div>
+        </form>
+
+        <div class="messages"></div>
+
+        <div class="actions">
+          <button class="btn" id="sentence">Sentence case</button>
+          <button class="btn" id="lower">lower case</button>
+          <button class="btn" id="upper">UPPER CASE</button>
+          <button class="btn" id="capitalized">Capitalized Case</button>
+          <button class="btn" id="alternating">aLtErNaTiNg cAsE</button>
+          <button class="btn" id="title">Title Case</button>
+          <button class="btn" id="inverse">InVeRsE CaSe</button>
+          <button class="btn" data-download-target="#content" id="download">Download Text</button>
+          <button class="btn" data-clipboard-target="#content" id="copy">Copy to Clipboard</button>
+          <button class="btn" id="clear">Clear</button>
+        </div>
+
+        <div class="row counts">
+          Character Count: <span id="char_count">0</span> | Word Count: <span id="word_count">0</span> | Line Count: <span id="line_count">0</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

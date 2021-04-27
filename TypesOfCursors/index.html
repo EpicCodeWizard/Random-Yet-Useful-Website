@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <title>Types of Cursors</title>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: 0px 0px 0px 0px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://www.w3schools.com/cssref/playit.asp?filename=playcss_cursor.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <div class="container" id="container" style="display: block;">
+      <div class="codecontainer">
+        <div class="demoHeader">
+          CSS Property:
+        </div>
+        <form action="javascript:return%20false;" class="playit">
+          cursor:<br>
+          <br>
+          <input id="preselectedValue" type="hidden" value="initial">
+          <div class="radio">
+            <input autocomplete="off" id="value_1" name="radio_position" onclick="click_position(this)" type="radio" value="alias"><label for="value_1">alias</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_2" name="radio_position" onclick="click_position(this)" type="radio" value="all-scroll"><label for="value_2">all-scroll</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_3" name="radio_position" onclick="click_position(this)" type="radio" value="auto"><label for="value_3">auto</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_4" name="radio_position" onclick="click_position(this)" type="radio" value="cell"><label for="value_4">cell</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_5" name="radio_position" onclick="click_position(this)" type="radio" value="context-menu"><label for="value_5">context-menu</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_6" name="radio_position" onclick="click_position(this)" type="radio" value="col-resize"><label for="value_6">col-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_7" name="radio_position" onclick="click_position(this)" type="radio" value="copy"><label for="value_7">copy</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_8" name="radio_position" onclick="click_position(this)" type="radio" value="crosshair"><label for="value_8">crosshair</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_9" name="radio_position" onclick="click_position(this)" type="radio" value="default"><label for="value_9">default</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_10" name="radio_position" onclick="click_position(this)" type="radio" value="e-resize"><label for="value_10">e-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_11" name="radio_position" onclick="click_position(this)" type="radio" value="ew-resize"><label for="value_11">ew-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_12" name="radio_position" onclick="click_position(this)" type="radio" value="grab"><label for="value_12">grab</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_13" name="radio_position" onclick="click_position(this)" type="radio" value="grabbing"><label for="value_13">grabbing</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_14" name="radio_position" onclick="click_position(this)" type="radio" value="help"><label for="value_14">help</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_15" name="radio_position" onclick="click_position(this)" type="radio" value="move"><label for="value_15">move</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_16" name="radio_position" onclick="click_position(this)" type="radio" value="n-resize"><label for="value_16">n-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_17" name="radio_position" onclick="click_position(this)" type="radio" value="ne-resize"><label for="value_17">ne-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_18" name="radio_position" onclick="click_position(this)" type="radio" value="nesw-resize"><label for="value_18">nesw-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_19" name="radio_position" onclick="click_position(this)" type="radio" value="ns-resize"><label for="value_19">ns-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_20" name="radio_position" onclick="click_position(this)" type="radio" value="nw-resize"><label for="value_20">nw-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_21" name="radio_position" onclick="click_position(this)" type="radio" value="nwse-resize"><label for="value_21">nwse-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_22" name="radio_position" onclick="click_position(this)" type="radio" value="no-drop"><label for="value_22">no-drop</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_23" name="radio_position" onclick="click_position(this)" type="radio" value="none"><label for="value_23">none</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_24" name="radio_position" onclick="click_position(this)" type="radio" value="not-allowed"><label for="value_24">not-allowed</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_25" name="radio_position" onclick="click_position(this)" type="radio" value="pointer"><label for="value_25">pointer</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_26" name="radio_position" onclick="click_position(this)" type="radio" value="progress"><label for="value_26">progress</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_27" name="radio_position" onclick="click_position(this)" type="radio" value="row-resize"><label for="value_27">row-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_28" name="radio_position" onclick="click_position(this)" type="radio" value="s-resize"><label for="value_28">s-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_29" name="radio_position" onclick="click_position(this)" type="radio" value="se-resize"><label for="value_29">se-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_30" name="radio_position" onclick="click_position(this)" type="radio" value="sw-resize"><label for="value_30">sw-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_31" name="radio_position" onclick="click_position(this)" type="radio" value="text"><label for="value_31">text</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_32" name="radio_position" onclick="click_position(this)" type="radio" value="url(myBall.cur),auto"><label for="value_32">url(myBall.cur),auto (CURSOR FILE, <a href="http://www.rw-designer.com/cursor-library" target="_blank" style="color: #0804ec; ">https://www.rw-designer.com/cursor-library</a> is a one of many cursor libraries. Go there, get a cursor, download it, and change myBall.cur to the file name...)</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_33" name="radio_position" onclick="click_position(this)" type="radio" value="vertical-text"><label for="value_33">vertical-text</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_34" name="radio_position" onclick="click_position(this)" type="radio" value="w-resize"><label for="value_34">w-resize</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_35" name="radio_position" onclick="click_position(this)" type="radio" value="wait"><label for="value_35">wait</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_36" name="radio_position" onclick="click_position(this)" type="radio" value="zoom-in"><label for="value_36">zoom-in</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_37" name="radio_position" onclick="click_position(this)" type="radio" value="zoom-out"><label for="value_37">zoom-out</label>
+          </div>
+          <div class="radio">
+            <input autocomplete="off" id="value_38" name="radio_position" onclick="click_position(this)" type="radio" value="initial"><label for="value_38">initial</label>
+          </div>
+        </form>
+      </div>
+      <div class="resultcontainer">
+        <div class="demoHeader">
+          Result:
+        </div>
+        <div id="demoParent">
+          <div id="demoDIV" style="cursor: pointer;">
+            <div>
+              <p>&nbsp;&nbsp;&nbsp;Put your mouse over this area to see the cursor result.</p>
+            </div>
+          </div>
+        </div>
+        <div class="demoHeader">
+          CSS Code:
+        </div>
+        <pre id="styleDIV" style="position: relative;">div {
+  &nbsp;&nbsp;&nbsp;&nbsp;cursor:<span id="enlargecssprop">pointer</span>;<br>}</pre>
+      </div>
+    </div>
+  </body>
+</html>

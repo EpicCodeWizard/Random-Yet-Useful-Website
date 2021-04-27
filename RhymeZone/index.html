@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RhymeZone</title>
+    <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body style="margin: 50px; font-family: 'Cabin Sketch';" bgcolor="#ff6e6e">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -50px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://www.rhymezone.com/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <div style="font-size: 30px;">
+      <p>Hello. Input data in the form below, and then you will be redirected to RhymeZone with the specific values you have input. Try it out!</p>
+      <form action="https://www.rhymezone.com/r/rhyme.cgi" id="form1" method="get" name="form1">
+        <b>Word:</b>&nbsp; <input id="rzinput" maxlength="60" name="Word" size="16" style="font-size: 16px;" value=""> <input style="font-size: 16px; height: 30px;" type="submit" value="Search"> &nbsp; <select name="typeofrhyme" onchange="if ($('#rzinput').val() !== '') {$('&lt;input&gt;').attr({type: 'hidden',name: 'loc',value: 'sel_change' }).appendTo('#form1'); this.form.submit()}" style="font-size: 16px;">
+          <option selected value="perfect">
+            Find rhymes
+          </option>
+          <option value="adv">
+            Find rhymes (advanced)
+          </option>
+          <option value="nry">
+            Find near rhymes
+          </option>
+          <option value="syn">
+            Find synonyms
+          </option>
+          <option value="jjb">
+            Find descriptive words
+          </option>
+          <option value="phr">
+            Find phrases
+          </option>
+          <option value="wke">
+            Find sentences
+          </option>
+          <option value="ant">
+            Find antonyms
+          </option>
+          <option value="def">
+            Find definitions
+          </option>
+          <option value="exa">
+            Find lyrics and poems
+          </option>
+          <option value="rel">
+            Find related words
+          </option>
+          <option value="sim">
+            Find similar sounding words
+          </option>
+          <option value="hom">
+            Find homophones
+          </option>
+          <option value="cons">
+            Match consonants only
+          </option>
+          <option value="sub">
+            Match these letters
+          </option>
+          <option value="spell">
+            Check spelling of word
+          </option>
+          <option value="pic">
+            Search for pictures
+          </option>
+          <option value="shake">
+            Search in Shakespeare
+          </option>
+          <option value="wke">
+            Search for quotations
+          </option>
+        </select><br>
+        <font size="-1"><br>
+        <b>Organize results by</b>: <input checked name="org1" type="radio" value="syl">Syllables <input name="org1" type="radio" value="let">Letters &nbsp;&nbsp;&nbsp; <b>Include phrases</b>:&nbsp;<input checked name="org2" type="radio" value="l">Yes&nbsp;<input name="org2" type="radio" value="sl">No</font> <input name="org3" type="hidden" value="y">
+      </form>
+    </div>
+  </body>
+</html>

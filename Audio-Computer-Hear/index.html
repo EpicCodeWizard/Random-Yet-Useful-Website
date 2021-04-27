@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="script.js"></script>
+		<link href="style.css" rel="stylesheet">
+    <title>Hear what the computer hears!</title>
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -16px 0px 0px -17px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://webrtc.github.io/samples/src/content/peerconnection/webaudio-output/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+		<div id="container">
+      <center><h1>Hear what the computer hears! To start, click "Start Video/Audio". To start reporting, click "Start Computer Listening and Reporting". To stop reporting, click "Stop Computer Listening and Reporting".</h1></center>
+      <video autoplay="" id="localVideo"></video>
+      <video autoplay="" id="remoteVideo"></video>
+			<canvas></canvas>
+      <button id="startButton" style="width: 150px;">Start Video/Audio</button>
+      <button id="callButton" style="width: 150px;">Start Computer Listening and Reporting</button>
+      <button id="hangupButton" style="width: 150px;">Stop Computer Listening and Reporting</button>
+		</div>
+	</body>
+</html>

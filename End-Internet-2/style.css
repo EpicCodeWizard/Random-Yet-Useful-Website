@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Pointy Demo;
+  src: url(Pointy_Demo.ttf);
+}
+
+@font-face {
+  font-family: Futuristic Font;
+  src: url(Futuristic.ttf);
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-family: Pointy Demo;
+  text-align: center;
+  font-weight: unset;
+  font-size: 100px;
+  margin: 20px 0px 0px 0px;
+  color: white;
+}
+
+.first {
+  color: white;
+  font-family: Futuristic Font;
+  font-size: 20px;
+}
+
+.second {
+  font-style: italic;
+  color: white;
+  font-family: Futuristic Font;
+  font-size: 20px;
+}
+
+ul {
+  color: white;
+  font-family: Futuristic Font;
+  font-size: 20px;
+}
+
+p {
+  color: white;
+  font-family: Futuristic Font;
+  font-size: 20px;
+}

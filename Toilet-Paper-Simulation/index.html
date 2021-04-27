@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="libs.min.js"></script>
+		<script type="text/javascript" src="Util.js"></script>
+		<script type="text/javascript" src="Config.js"></script>
+		<script type="text/javascript" src="Piece.js"></script>
+		<link rel="stylesheet" href="style.css">
+    <title>Toilet Paper Simulator</title>
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body onload="init(&#39;myCanvas&#39;, Piece, Config);" data-new-gr-c-s-check-loaded="14.982.0" style="background-color: rgb(0, 0, 0);">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: -50px 0px 0px -50px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From http://papertoilet.com/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <h1><br>Toilet Paper<br>Simulator</h1>
+    <h2>
+      To use:<br>• Scroll<br>• Use your mouse<br>• Use your arrow keys<br><br>To reset, reload the page.</h2>
+		<canvas id="myCanvas" style="position: absolute; z-index: 2; left: 0px; top: 25px; width: 1536px; height: 722px;" resize="true"
+		 width="1920" height="903"></canvas>
+		<div id="output" style="color:white;z-index:1; position:absolute;left:0;top:-30px;font-size:10px;">start, trail: , 250, true</div>
+	</body>
+</html>

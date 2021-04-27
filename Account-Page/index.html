@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting</title>
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body>
+    <pre>Must be redirected from homepage after sign-in. Redirecting to homepage.</pre>
+    <script>
+      async function replacewithawait() {
+        await new Promise(r => setTimeout(r, 3000));
+        window.location.replace("/");
+      }
+      replacewithawait()
+    </script>
+  </body>
+</html>

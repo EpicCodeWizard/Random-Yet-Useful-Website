@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/ICON-Tools.png" rel="icon">
+    <title>Image Size Finder</title>
+  </head>
+  <body style="margin: 50px;">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: -50px 0px 0px -50px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From https://tools.knowledgewalls.com/onlineimagesizefinder/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+    <style>
+      @font-face {
+        font-family: Pointy Demo;
+        src: url(Pointy.ttf);
+      }
+      h1 {
+        color: black;
+        font-family: Pointy Demo;
+        font-weight: unset;
+        font-size: 100px;
+        margin: 0px;
+      }
+    </style>
+    <script type='text/javascript' src='https://tools.knowledgewalls.com/javascript/jquery-1.7.2.min.js'></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('img_display_hidden').onload = function() {
+          document.getElementById('img_information').innerHTML = 'Width: ' + this.width + 'px; Height: ' + this.height + 'px;'
+        }
+      };
+
+      function readImage(e) {
+        if(e.files && e.files[0]) {
+          var i = new FileReader();
+          i.onload = function(e) {
+            $('#img_display').attr('src', e.target.result);
+            $('#img_display_hidden').attr('src', e.target.result)
+          };
+          i.readAsDataURL(e.files[0])
+        }
+      };
+      $(function() {
+        $('#img_file').change(function() {
+          readImage(document.getElementById('img_file'))
+        })
+      });
+    </script>
+    <h1>Choose Image<h1>
+    <input type="file" id="img_file" name="img_file" accept="image/*">
+    <h1 id="img_information"></h1>
+    <img id="img_display_hidden" style="display:none">
+    <img id="img_display" style="max-width:500px">
+  </body>
+</html>

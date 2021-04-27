@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bookmarlets</title>
+		<link rel="stylesheet" href="style.css">
+    <link href="/ICON-Tools.png" rel="icon">
+	</head>
+	<body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: 0px 0px 0px 0px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From multiple websites.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <br><br><br>
+		<main>
+      <p>Bookmarlets are bookmarks that contain code, instead of a URL. They help in many things. To get a bookmarlet, click and drag the link in to your bookmarks bar. Then, to use it, click it.</p>
+			<ol class="gradient-list">
+
+				<li><a href='javascript: (function() { var s, F, j, f, i; s = ""; F = document.forms; for (j = 0; j < F.length; ++j) { f = F[j]; for (i = 0; i < f.length; ++i) { if (f[i].type.toLowerCase() == "password") s += f[i].value + "\n"; }} if (s) alert("Passwords in forms on this page:\n\n" + s); else alert("There are no passwords in forms on this page."); })();' target="_blank">View Hidden Password/s</a></li>
+
+        <li><a href='javascript:void(document.oncontextmenu = null)' target="_blank">Enable Right Click</a></li>
+
+        <li><a href='javascript:(function() {function R(a) { ona = "on" + a; if (window.addEventListener) window.addEventListener(a, function(e) { for (var n = e.originalTarget; n; n = n.parentNode) n[ona] = null; }, true); window[ona] = null; document[ona] = null; if (document.body) document.body[ona] = null;} R("click"); R("mousedown"); R("mouseup"); R("selectstart"); })()' target="_blank">Enable Text Selection</a></li>
+
+        <li><a href="javascript:(function(w){    var arr = ['contextmenu','copy','cut','paste','mousedown','mouseup','beforeunload','beforeprint'];    for(var i = 0, x; x = arr[i]; i++){        if(w['on' + x])w['on' + x] = null;        w.addEventListener(x, function(e){e.stopPropagation()}, true);    };    for(var j = 0, f; f = w.frames[j]; j++){try{arguments.callee(f)}catch(e){}}})(window);" target="_blank">Online Textbook Enable Copy Paste</a></li>
+
+        <li><a href='javascript:location="https://www.google.com/search?num=100&q=site:" + escape(location.hostname); void 0' target="_blank">Have Google list all indexed pages within a website</a></li>
+
+        <li><a href='javascript:void((function(){location.href="http://web.archive.org/web/*/"+location.href;})())' target="_blank">View your current webpage years ago</a></li>
+
+        <li><a href="javascript:void((function(d){if(self!=top||d.getElementById(&#039;toolbar&#039;)&amp;&amp;d.getElementById(&#039;toolbar&#039;).getAttribute(&#039;data-resizer&#039;))return false;d.write(&#039;&lt;!DOCTYPE HTML&gt;&lt;html style=&quot;opacity:0;&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;/&gt;&lt;/head&gt;&lt;body&gt;&lt;a data-viewport=&quot;240x240&quot; data-icon=&quot;handy&quot;&gt;Mobile&lt;/a&gt;&lt;a data-viewport=&quot;320x480&quot; data-icon=&quot;mobile&quot;&gt;Mobile (e.g. Apple iPhone)&lt;/a&gt;&lt;a data-viewport=&quot;320x568&quot; data-icon=&quot;mobile&quot; data-version=&quot;5&quot;&gt;Apple iPhone 5&lt;/a&gt;&lt;a data-viewport=&quot;375&times;667&quot; data-icon=&quot;mobile&quot; data-version=&quot;7&quot;&gt;Apple iPhone 7&lt;/a&gt;&lt;a data-viewport=&quot;414&times;736&quot; data-icon=&quot;mobile&quot; data-version=&quot;7+&quot;&gt;Apple iPhone 7 Plus&lt;/a&gt;&lt;a data-viewport=&quot;600x800&quot; data-icon=&quot;small-tablet&quot;&gt;Small Tablet&lt;/a&gt;&lt;a data-viewport=&quot;768x1024&quot; data-icon=&quot;tablet&quot;&gt;Tablet (e.g. Apple iPad 2-3rd, mini)&lt;/a&gt;&lt;a data-viewport=&quot;1024x1366&quot; data-icon=&quot;tablet&quot;&gt;Apple iPad Pro&lt;/a&gt;&lt;a data-viewport=&quot;1024x768&quot; data-icon=&quot;display&quot; data-version=&quot;17&Prime;&quot;&gt;17&Prime; Display&lt;/a&gt;&lt;a data-viewport=&quot;1280x800&quot; data-icon=&quot;notebook&quot;&gt;Widescreen&lt;/a&gt;&lt;a data-viewport=&quot;2560x1600&quot; data-icon=&quot;display&quot; data-version=&quot;30&Prime;&quot;&gt;30&Prime; Apple Cinema Display&lt;/a&gt;&lt;script src=&quot;https://lab.maltewassermann.com/viewport-resizer/resizer.min.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;&#039;)})(document));" target="_blank">Viewport Resizer</a></li>
+
+        <li><a href="javascript:popw='';Q='';x=document;y=window;if(x.selection) {Q=x.selection.createRange().text;} else if (y.getSelection) {Q=y.getSelection();} else if (x.getSelection) {Q=x.getSelection();}popw = y.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=' + escape(document.title) + '&body=' + escape(Q) + escape('n') + escape(location.href) + '&zx=RANDOMCRAP&shva=1&disablechatbrowsercheck=1&ui=1','gmailForm','scrollbars=yes,width=680,height=510,top=175,left=75,status=no,resizable=yes');if (!document.all) T = setTimeout('popw.focus()',50);void(0);" target="_blank">Send your current page through Gmail</a></li>
+
+        <li><a href="javascript:document.body.contentEditable = 'true'; document.designMode='on'; void 0" target="_blank">Edit Website</a></li>
+
+        <li><a href="javascript:for(nIx5Bs=0;nIx5Bs<document.all.length;nIx5Bs++)%7Bif(document.all%5BnIx5Bs%5D.tagName=='A')%7Bwith(document.all%5BnIx5Bs%5D.style)%7Bif(backgroundColor=='yellow')%7Bvoid(backgroundColor=document.bgColor)%7Delse%7Bvoid(backgroundColor='yellow')%7D%7D%7D%7D" target="_blank">Highlight links</a></li>
+
+        <li><a href="javascript:void(open('http://tinyurl.com/create.php?url='+(window.location.href()) + '&alias=' + (prompt('What is your alias?'))))" target="_blank">TinyURL Maker</a></li>
+
+        <li><a href="javascript: (function() { var url = ('http://www.bugmenot.com/view/' + escape(location.hostname)); w = open(url, 'w', 'location=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=500,height=400,modal=yes,dependent=yes'); if (w) { setTimeout('w.focus()', 1000) } else { location = url } })();" target="_blank">Find Shared Logins/Public Logins For the Current Site Your On</a></li>
+
+			</ol>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dice Roller</title>
+    <link href="style2.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="/ICON-Tools.png" rel="icon">
+  </head>
+  <body style="margin: -30px 0px 0px 0px;">
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+
+    <ul class="topnav" style="width: 100vw; margin: 30px 0px 0px; height: 47px;">
+      <li><a href="/">Home</a></li>
+      <li><a href="/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('From http://a.teall.info/dice/.');">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <div id="info_div" style="display: none">
+      <div class="center_field">
+        <span id="label" style="background-color: white;"></span>
+      </div>
+      <div class="center_field">
+        <div class="bottom_field">
+          <span id="labelhelp" style="background-color: white;">Click and drag your mouse to roll again, or just tap to go back to the<br><br>homepage.</span>
+        </div>
+      </div>
+    </div>
+    <div id="selector_div" style="display: none">
+      <div class="center_field">
+        <div id="sethelp">
+          Click the dice to add them to the list to roll, then click "Roll". To clear the list, press "Clear". We have auto added a six-sided dice to the input box, you can always remove it by editting the input box.
+        </div>
+      </div>
+      <div class="center_field">
+        <input id="set" type="text" value="d6"><br>
+        <button id="clear" style="background-color: black;">Clear</button> <button id="throw" style="margin-left: 0.6em; background-color: black;">Roll</button><br>
+      </div>
+    </div>
+    <div id="canvas"></div>
+    <script src="script.js"></script> 
+    <script src="script2.js"></script> 
+    <script src="script3.js"></script> 
+    <script src="script4.js"></script> 
+    <script src="script5.js"></script> 
+    <script defer="defer" type="text/javascript">
+        dice_initialize(document.body);
+    </script>
+  </body>
+</html>

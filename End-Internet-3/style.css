@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Pointy Demo;
+  src: url(Pointy_Demo.ttf);
+}
+h1 {
+  color: white;
+  font-family: Pointy Demo;
+  font-weight: unset;
+  font-size: 100px;
+}
+body {
+  background-color: black;
+}
+p {
+  font-family: Pointy Demo;
+  font-size: 90px;
+  text-align: center;
+  color: orange;
+  font-weight: unset;
+  margin: 35px;
+}

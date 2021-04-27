@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="https://avatarqing.github.io/FlappyBird/">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: NavbarFont;
+        src: url(https://random-yet-useful-website.epiccodewizard.repl.co/NavbarFont.otf);
+        font-weight: none;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        z-index: 9998;
+      }
+
+      ul.topnav li {
+        float: left;
+      }
+
+      ul.topnav li a {
+        font-family: NavbarFont;
+        font-size: 25px;
+        margin: -3px 0px 0px 0px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul.topnav li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      ul.topnav li a.active {
+        background-color: #4CAF50;
+      }
+    </style>
+    
+    <ul class="topnav" style="width: 100vw; height: 47px;">
+      <li><a href="https://random-yet-useful-website.epiccodewizard.repl.co/">Home</a></li>
+      <li><a href="https://random-yet-useful-website.epiccodewizard.repl.co/About-the-Website">About the Website</a></li>
+      <li><a href="javascript:alert('By Sarvesh Madullapalli. From https://github.com/AvatarQing/FlappyBird.')">By Sarvesh Madullapalli &#169; 2021. All rights reserved. Click for sources.</a></li>
+    </ul>
+    <div id="GameDiv" class="wrapper">
+      <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+      <div id="splash">
+        <div class="progress-bar stripes">
+          <span style="width: 0%"></span>
+        </div>
+      </div>
+    </div>
+    <script src="src/settings.js" charset="utf-8"></script>
+    <script src="cocos2d-js-min.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
